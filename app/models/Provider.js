@@ -13,7 +13,7 @@ const providerSchema = new mongoose.Schema({
   horary: String, required:true
   deliveryLocality : [String],
   reputation : { type: Number, min: 1, max: 10 }
-  //
+
 
 })
 
