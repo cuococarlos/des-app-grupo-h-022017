@@ -8,14 +8,16 @@ const menuSchema = new mongoose.Schema({
   deliveryCost : { type: Number, min: 10, max: 40 }, required:true,
   validFrom : { type: Date },
   validTo : { type: Date },
-  deliveryTime :
-  horary: String, required:true
-  deliveryLocality : [String],
-  reputation : { type: Number, min: 1, max: 10 }
-
-
+  //deliveryTime :
+  //deliveryAverageTime :
+  minimunQuantity: { type: Number, min: 10, max: 70 }, required:true,
+  minimunQuantityPrice: { type: Number, min: 0, max: 1000 }, required:true,
+  minimunQuantity2: { type: Number, min: 40, max: 150 },
+  minimunQuantityPrice2: { type: Number, min: 0, max: 1000 },
+  reputation : { type: Number, min: 1, max: 10 },
+  maxQuantitySalesPerDay : Number
 })
 
-const Provider = mongoose.model('Provider', providerSchema)
+const Menu = mongoose.model('Menu', menuSchema)
 
-export default Provider
+export default Menu
